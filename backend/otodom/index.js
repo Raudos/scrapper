@@ -1,31 +1,29 @@
 const $ = require('cheerio');
-
+const OtodomConfig = require('./otodom.config');
 const fileManager = require('../saveJson');
 
 async function navigateSearchUI(page) {
-  await page.waitForSelector('#mainTopSearch .location-selector #search-location');
-  
-  await page.click('#mainTopSearch .location-selector');
-  await page.type('span.select2-search.select2-search--dropdown > input', 'Warszawa');
+  await OtodomConfig.openCityInput(page);
+  await OtodomConfig.enterCityName('Warszawa', page);
   await page.waitFor(1000);
-  await page.click('.select2-results ul.select2-results__options .select2-results__option--highlighted');
+  await OtodomConfig.selectHighlightedCity(page);
   
-  await page.click('[data-name*="filter_float_price:from"]');
-  await page.keyboard.type('600');
+  await OtodomConfig.togglePriceFromInput(page);
+  await OtodomConfig.enterToggledInputValue('600', page);
   
-  await page.click('[data-name*="filter_float_price:to"]');
-  await page.keyboard.type('2800');
+  await OtodomConfig.togglePriceToInput(page);
+  await OtodomConfig.enterToggledInputValue('2800', page);
   
-  await page.click('[data-name*="filter_float_m:from"]');
-  await page.keyboard.type('20');
+  await OtodomConfig.toggleMetersFromInput(page);
+  await OtodomConfig.enterToggledInputValue('20', page);
   
-  await page.click('[data-name*="filter_float_m:to"]');
-  await page.keyboard.type('30');
+  await OtodomConfig.toggleMetersToInput(page);
+  await OtodomConfig.enterToggledInputValue('30', page);
   
-  await page.click('[data-name*="filter_enum_rooms_num"]');
-  await page.click('.select2-results ul.select2-results__options li:nth-child(1)');
+  await OtodomConfig.toggleRoomsInput(page);
+  await OtodomConfig.selectNumberOfRooms(1, page);
   
-  await page.click('.btn-search-big');
+  await OtodomConfig.sendQuery(page);
 }
 
 async function getOffers(page, update = false, currentPage = 0) {
@@ -60,6 +58,8 @@ async function getOffers(page, update = false, currentPage = 0) {
 }
 
 module.exports = async (page) => {
+  await page.waitForSelector('#mainTopSearch .location-selector #search-location');
+  
   await navigateSearchUI(page);
   await getOffers(page);
 };
