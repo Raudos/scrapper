@@ -29,7 +29,7 @@ async function navigateSearchUI(page) {
   await page.click('.btn-search-big');
 }
 
-async function getOffers(page) {
+async function getOffers(page, update = false, currentPage = 0) {
   await page.waitFor(2000);
   let bodyHTML = await page.evaluate(() => document.body.innerHTML);
   
@@ -47,11 +47,17 @@ async function getOffers(page) {
     });
   });
   
-  fileManager('otodom', JSON.stringify(offers, undefined, 2));
+  await fileManager('otodom', offers, update);
+
+  const nextPageSelector = '#pagerForm .pager-next a[data-dir="next"]';
+  const hasNextPage = $(nextPageSelector, bodyHTML)[0];
   
-  // await page.evaluate(() => {
-  //   const hasPagination
-  // })
+  if (hasNextPage && currentPage < 4) {
+    await page.click(nextPageSelector);
+    await page.waitFor(2000);
+    
+    await getOffers(page, true, currentPage + 1);
+  }
 }
 
 module.exports = async (page) => {
