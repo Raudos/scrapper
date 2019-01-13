@@ -6,8 +6,7 @@ async function navigateSearchUI(page) {
   await page.waitForSelector('#mainTopSearch .location-selector #search-location');
   
   await page.click('#mainTopSearch .location-selector');
-  await page.type('#mainTopSearch .location-selector #search-location', 'Warszawa');
-  
+  await page.type('span.select2-search.select2-search--dropdown > input', 'Warszawa');
   await page.waitFor(1000);
   await page.click('.select2-results ul.select2-results__options .select2-results__option--highlighted');
   
