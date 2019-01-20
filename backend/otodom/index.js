@@ -3,7 +3,6 @@ const OtodomConfig = require('./otodom.config');
 const fileManager = require('../files/saveJson');
 
 async function navigateSearchUI(page, query) {
-  console.log(query)
   await OtodomConfig.openCityInput(page);
   await OtodomConfig.enterCityName(query.city, page);
   await page.waitFor(1000);
@@ -52,7 +51,7 @@ async function getOffers(page, update = false, currentPage = 0) {
   const nextPageSelector = '#pagerForm .pager-next a[data-dir="next"]';
   const hasNextPage = $(nextPageSelector, bodyHTML)[0];
   
-  if (hasNextPage && currentPage < 4) {
+  if (hasNextPage && currentPage < 1) {
     await page.click(nextPageSelector);
     await page.waitFor(2000);
     

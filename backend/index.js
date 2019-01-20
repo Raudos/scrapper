@@ -1,21 +1,18 @@
-const puppeteer = require('puppeteer');
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-const runFunc = require('./otodom/index');
-const readQuery = require('./files/readQuery');
+const initialiseRoutes = require('./routes/index');
 
-(async () => {
-  const query = await readQuery();
-  
-  if (query) {
-    const browser = await puppeteer.launch({ headless: false });
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1280, height: 800 });
-  
-    await page.goto('https://www.otodom.pl/wynajem/mieszkanie/');
-    await runFunc(page, query);
-  
-    return await browser.close();
-  }
-  
-  console.warn("No query detected.");
-})();
+// Setup
+const app = express();
+
+// Middleware
+app.use(bodyParser.json());
+app.use(cors());
+
+initialiseRoutes(app);
+
+app.listen(3000, () => {
+  console.log('Server started!');
+});
