@@ -1,27 +1,30 @@
 const $ = require('cheerio');
 const OtodomConfig = require('./otodom.config');
-const fileManager = require('../saveJson');
+const fileManager = require('../files/saveJson');
 
-async function navigateSearchUI(page) {
+async function navigateSearchUI(page, query) {
+  console.log(query)
   await OtodomConfig.openCityInput(page);
-  await OtodomConfig.enterCityName('Warszawa', page);
+  await OtodomConfig.enterCityName(query.city, page);
   await page.waitFor(1000);
   await OtodomConfig.selectHighlightedCity(page);
   
   await OtodomConfig.togglePriceFromInput(page);
-  await OtodomConfig.enterToggledInputValue('600', page);
+  await OtodomConfig.enterToggledInputValue(query.price_from, page);
   
   await OtodomConfig.togglePriceToInput(page);
-  await OtodomConfig.enterToggledInputValue('2800', page);
+  await OtodomConfig.enterToggledInputValue(query.price_to, page);
   
   await OtodomConfig.toggleMetersFromInput(page);
-  await OtodomConfig.enterToggledInputValue('20', page);
+  await OtodomConfig.enterToggledInputValue(query.area_from, page);
   
   await OtodomConfig.toggleMetersToInput(page);
-  await OtodomConfig.enterToggledInputValue('30', page);
+  await OtodomConfig.enterToggledInputValue(query.area_to, page);
   
-  await OtodomConfig.toggleRoomsInput(page);
-  await OtodomConfig.selectNumberOfRooms(1, page);
+  if (query.rooms) {
+    await OtodomConfig.toggleRoomsInput(page);
+    await OtodomConfig.selectNumberOfRooms(query.rooms, page);
+  }
   
   await OtodomConfig.sendQuery(page);
 }
@@ -57,9 +60,9 @@ async function getOffers(page, update = false, currentPage = 0) {
   }
 }
 
-module.exports = async (page) => {
+module.exports = async (page, query) => {
   await page.waitForSelector('#mainTopSearch .location-selector #search-location');
   
-  await navigateSearchUI(page);
+  await navigateSearchUI(page, query);
   await getOffers(page);
 };
