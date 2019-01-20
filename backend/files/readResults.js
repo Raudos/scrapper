@@ -2,13 +2,14 @@ const fs = require('fs');
 
 module.exports = () => {
   return new Promise((resolve, reject) => {
-    fs.readFile(`./backend/files/query.json`, (err, data) => {
+    fs.readFile(`./backend/files/results.json`, (err, data) => {
       if (err) {
-        reject(null);
+        reject(err);
         return;
       }
-  
+      
       resolve(JSON.parse(data));
     });
-  });
+  })
+  .catch(e => e);
 };

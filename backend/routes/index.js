@@ -1,6 +1,8 @@
 const fs = require('fs');
 const runBrowser = require('../browser/index');
 
+const saveQuery = require('../files/saveQuery');
+
 module.exports = app => {
   app.get('/searchForOffers', async (req, res) => {
     console.log('Searching for offers!');
@@ -9,7 +11,7 @@ module.exports = app => {
       const isScrappingCompleted = await runBrowser();
   
       if (isScrappingCompleted) {
-        fs.readFile(`./backend/files/otodom.json`, (err, data) => {
+        fs.readFile(`./backend/files/results.json`, (err, data) => {
           if (err) {
             res.status(400).send(err);
             return;
@@ -29,14 +31,12 @@ module.exports = app => {
     console.log('Creating new query.json file!');
     const { body } = req;
   
-    fs.writeFile('./backend/files/query.json', JSON.stringify(body, undefined, 2), function(err) {
-      if (err) {
-        res.status(400).send(err);
-        return;
-      }
-    
-      console.log('Success, new query saved!');
-      res.send(body);
-    });
+    saveQuery(body)
+      .then((queryWithId) => {
+        res.send(queryWithId);
+      })
+      .catch((e) => {
+        res.status(400).send(e);
+      });
   });
 };
