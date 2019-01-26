@@ -1,40 +1,33 @@
-const readFile = require('../files/readFile');
 const runBrowser = require('../browser/index');
 const saveQuery = require('../files/saveQuery');
 
+const BackendError = require('../models/BackendError');
+
 module.exports = app => {
   app.get('/searchForOffers', async (req, res) => {
-    console.log('Searching for offers!');
-
     try {
-      const isScrappingCompleted = await runBrowser();
-
-      if (isScrappingCompleted) {
-        readFile(`./backend/files/results.json`)
-          .then(data => {
-            res.send(JSON.stringify(data, undefined, 2));
-          })
-          .catch(e => {
-            res.status(400).send(e);
-          });
-      } else {
-        res.status(400).send('No query found.');
-      }
+      runBrowser()
+        .then(data => {
+          res.send(JSON.stringify(data, undefined, 2));
+        })
+        .catch(backendError => {
+          res.status(backendError.status).send(backendError);
+        });
     } catch (e) {
-      res.status(400).send(e);
+      const error = new BackendError('unknown', 500, e);
+      res.status(error.status).send(error);
     }
   });
 
   app.post('/postNewQuery', (req, res) => {
-    console.log('Creating new query.json file!');
     const { body } = req;
 
     saveQuery(body)
       .then((queryWithId) => {
         res.send(queryWithId);
       })
-      .catch((e) => {
-        res.status(400).send(e);
+      .catch((backendError) => {
+        res.status(backendError.status).send(backendError);
       });
   });
 };

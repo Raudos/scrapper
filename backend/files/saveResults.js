@@ -13,21 +13,17 @@ function saveFile(queryId, offers, previousOffers = []) {
     offers: removeDuplicates(offers, previousOffers),
   };
 
-  return writeFile(`./backend/files/results.json`, JSON.stringify(dataToSave, undefined, 2));
+  return writeFile(`./backend/data/results.json`, JSON.stringify(dataToSave, undefined, 2));
 }
 
 module.exports = async (offers) => {
-  const query = await readFile(`./backend/files/query.json`);
-  const results = await readFile('./backend/files/results.json')
+  const query = await readFile(`./backend/data/query.json`);
+  const results = await readFile('./backend/data/results.json')
     .catch(() => null);
 
-  if (query) {
-    if (results && query.id === results.queryId) {
-      return saveFile(query.id, offers, results.offers);
-    } else {
-      return saveFile(query.id, offers);
-    }
+  if (results && query.id === results.queryId) {
+    return saveFile(query.id, offers, results.offers);
   } else {
-    throw new Error("Query file missing!");
+    return saveFile(query.id, offers);
   }
 };

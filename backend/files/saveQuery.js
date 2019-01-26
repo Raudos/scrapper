@@ -6,6 +6,6 @@ module.exports = (query) => {
   const queryWithId = Object.assign(query, { id: shortid.generate() });
   const strQuery = JSON.stringify(queryWithId, undefined, 2);
 
-  return writeFile('./backend/files/query.json', strQuery)
+  return writeFile('./backend/data/query.json', strQuery)
     .then(() => queryWithId);
 };

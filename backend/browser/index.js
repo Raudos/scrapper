@@ -1,24 +1,39 @@
 const puppeteer = require('puppeteer');
+const _ = require('lodash');
 
 const readFile = require('../files/readFile');
-const runFunc = require('../otodom/index');
+const saveResults = require('../files/saveResults');
+
+// Portals
+const otodom = require('./portals/otodom/index');
+
+// Models
+const BackendError = require('../models/BackendError');
 
 module.exports = async () => {
-  const query = await readFile('./backend/files/query.json');
+  const query = await readFile('./backend/data/query.json');
+  const status = await readFile('./backend/data/status.json');
 
-  if (query) {
-    const browser = await puppeteer.launch({ headless: true });
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1280, height: 800 });
+  if (status.length) {
+    if (query && !(query instanceof BackendError)) {
+      const runners = {
+        otodom,
+      };
 
-    await page.goto('https://www.otodom.pl/wynajem/mieszkanie/');
-    await runFunc(page, query);
+      const browser = await puppeteer.launch({ headless: true });
 
-    await browser.close();
+      const offers = await Promise.all(status.map(portalName => runners[portalName](browser, query)))
+        .then(data => _.flatten(data));
 
-    return true;
+      await browser.close();
+
+      await saveResults(offers);
+
+      return offers;
+    }
+
+    return query;
   }
 
-  console.warn("No query detected.");
-  return null;
+  return new BackendError('Tests not passed', 500, {});
 };
