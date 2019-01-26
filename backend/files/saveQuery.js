@@ -1,18 +1,11 @@
-const fs = require('fs');
 const shortid = require('shortid');
 
+const writeFile  = require('./writeFile');
+
 module.exports = (query) => {
-  return new Promise((resolve, reject) => {
-    const queryWithId = Object.assign(query, { id: shortid.generate() });
-    const strQuery = JSON.stringify(queryWithId, undefined, 2);
-    
-    fs.writeFile('./backend/files/query.json', strQuery, (err) => {
-      if (err) {
-        reject(null);
-        return;
-      }
-      
-      resolve(queryWithId);
-    });
-  });
+  const queryWithId = Object.assign(query, { id: shortid.generate() });
+  const strQuery = JSON.stringify(queryWithId, undefined, 2);
+
+  return writeFile('./backend/files/query.json', strQuery)
+    .then(() => queryWithId);
 };

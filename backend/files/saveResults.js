@@ -1,35 +1,25 @@
-const fs = require('fs');
 const _ = require('lodash');
 
-const readQuery = require('./readQuery');
-const readResults = require('./readResults');
-
+const writeFile = require('./writeFile');
+const readFile = require('./readFile');
 
 function removeDuplicates(newOffers, previousOffers) {
   return _.uniqBy(newOffers.concat(previousOffers), 'offerLink');
-};
+}
 
 function saveFile(queryId, offers, previousOffers = []) {
   const dataToSave = {
     queryId,
     offers: removeDuplicates(offers, previousOffers),
   };
-  
-  return new Promise((resolve, reject) => {
-    fs.writeFile(`./backend/files/results.json`, JSON.stringify(dataToSave, undefined, 2), (err) => {
-      if (err) {
-        reject(null);
-        return
-      }
-      
-      resolve(true);
-    });
-  });
+
+  return writeFile(`./backend/files/results.json`, JSON.stringify(dataToSave, undefined, 2));
 }
 
 module.exports = async (offers) => {
-  const query = await readQuery();
-  const results = await readResults();
+  const query = await readFile(`./backend/files/query.json`);
+  const results = await readFile('./backend/files/results.json')
+    .catch(() => null);
 
   if (query) {
     if (results && query.id === results.queryId) {

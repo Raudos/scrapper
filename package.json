@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "backend": "node backend/index.js",
     "test": "jest"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "cheerio": "^1.0.0-rc.2",
     "cors": "^2.8.5",
+    "es6-promisify": "^6.0.1",
     "express": "^4.16.4",
     "lodash": "^4.17.11",
     "puppeteer": "^1.11.0",
