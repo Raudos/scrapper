@@ -1,5 +1,6 @@
 const runBrowser = require('../browser/index');
 const saveQuery = require('../files/saveQuery');
+const saveSubscription = require('../files/saveSubscription');
 
 const BackendError = require('../models/BackendError');
 
@@ -25,6 +26,16 @@ module.exports = app => {
     saveQuery(body)
       .then((queryWithId) => {
         res.send(queryWithId);
+      })
+      .catch((backendError) => {
+        res.status(backendError.status).send(backendError);
+      });
+  });
+  
+  app.post('/registerSubscription', (req, res) => {
+    saveSubscription(req.body)
+      .then(() => {
+        res.status(200).send({});
       })
       .catch((backendError) => {
         res.status(backendError.status).send(backendError);

@@ -17,7 +17,8 @@
     "puppeteer": "^1.11.0",
     "react": "16.6.3",
     "react-native": "0.57.8",
-    "shortid": "^2.2.14"
+    "shortid": "^2.2.14",
+    "web-push": "^3.3.3"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

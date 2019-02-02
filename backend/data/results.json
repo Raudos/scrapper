@@ -1,60 +1,17 @@
 {
-  "queryId": "I60mXOthW",
+  "queryId": "Ph887wqlM",
   "offers": [
     {
-      "name": "Warszawa, Mokotów ul. Bukietowa dla jednej osoby",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Górny Mokotów",
+      "name": "Studio-22m2 od 01.02,ciche-okolice Al.Krakowskiej",
+      "location_short": "Mieszkanie na wynajem: Warszawa, Okęcie",
       "rooms": "1",
-      "area": "25m²",
+      "area": "22m²",
       "price": "1200zł/mc",
-      "offerOwner": "",
-      "offerLink": "https://www.otodom.pl/oferta/warszawa-mokotow-ul-bukietowa-dla-jednej-osoby-ID3SoWO.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImhtbWRuejNuNjQ3NjItQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.iuyDJhUTGX5r8bUCV7T4EI7HNmErcyFosDvcGuuxFWw/image;s=655x491;q=80",
-      "type": "otodom"
-    },
-    {
-      "name": "Wynajmę Kawalerkę",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Wola",
-      "rooms": "1",
-      "area": "21m²",
-      "price": "1250zł/mc",
-      "offerOwner": "",
-      "offerLink": "https://www.otodom.pl/oferta/wynajme-kawalerke-ID33QpG.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6Ijc2eGJ5eHJ1dmZtby1BUEwiLCJ3IjpbeyJmbiI6ImoxajNvMTNtNmJnbjEtQVBMIiwicyI6IjE0IiwicCI6IjEwLC0xMCIsImEiOiIwIn1dfQ.9y68s3uJllLXvSHjpIVJzni8jP1zQA1hQD11-0c9pKE/image;s=655x491;q=80",
-      "type": "otodom"
-    },
-    {
-      "name": "Włodarzewska 81C, Ochota, kawalerka, Bez Prowizji",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Ochota",
-      "rooms": "1",
-      "area": "25m²",
-      "price": "1400zł/mc",
-      "offerOwner": "",
-      "offerLink": "https://www.otodom.pl/oferta/wlodarzewska-81c-ochota-kawalerka-bez-prowizji-ID3S7Te.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImFuNW13NTA3NDM2NzMtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.Y3M1Rygq3jO7HlzJN6fmQ463HYLdlW4KNrrJGmkOo0U/image;s=655x491;q=80",
-      "type": "otodom"
-    },
-    {
-      "name": "Popiełuszki 17A, Żoliborz, kawalerka, Bez Prowizji",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Żoliborz",
-      "rooms": "1",
-      "area": "20m²",
-      "price": "1400zł/mc",
-      "offerOwner": "",
-      "offerLink": "https://www.otodom.pl/oferta/popieluszki-17a-zoliborz-kawalerka-bez-prowizji-ID3QRGk.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6Imd4MDUzN2VseHAwZjItQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.7biqQGjP0PV0zhAsrJau7R22x5Py3tvOi80prRSpYRQ/image;s=655x491;q=80",
-      "type": "otodom"
-    },
-    {
-      "name": "Kawalerka 26m, widna kuchnia, ul. Broniewskiego",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Bielany",
-      "rooms": "1",
-      "area": "26m²",
-      "price": "1400zł/mc",
-      "offerOwner": "Ofertaprywatna",
-      "offerLink": "https://www.otodom.pl/oferta/kawalerka-26m-widna-kuchnia-ul-broniewskiego-ID3TsIA.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6IjAzYnRmOHVpMm85MzEtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.rO7BoYMZV9eO4lsDcTHUF7TX2qgJAqItJKE97z9HaA0/image;s=655x491;q=80",
-      "type": "otodom"
+      "offerOwner": "MajewskiPrestige&Partners",
+      "offerLink": "https://www.otodom.pl/oferta/studio-22m2-od-01-02-ciche-okolice-al-krakowskiej-ID3TJiM.html#ed84d0eb42",
+      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6IjFnMWxlNTZnYmN3eDEtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.FwgDbB7qaACsQAKK_0fbBKjq4CmYdrUHhe-FkQr5FQU/image;s=655x491;q=80",
+      "type": "otodom",
+      "status": "new"
     },
     {
       "name": "1 pok-23m-ul.Zarankiewicza-Ochota-ciche-Kratka bal",
@@ -63,75 +20,46 @@
       "area": "23m²",
       "price": "1100zł/mc",
       "offerOwner": "E-domnieruchomości",
-      "offerLink": "https://www.otodom.pl/oferta/1-pok-23m-ul-zarankiewicza-ochota-ciche-kratka-bal-ID3Tkos.html#fc2f018173",
+      "offerLink": "https://www.otodom.pl/oferta/1-pok-23m-ul-zarankiewicza-ochota-ciche-kratka-bal-ID3Tkos.html#ed84d0eb42",
       "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImtlMXBneGhhaHBvdC1BUEwiLCJ3IjpbeyJmbiI6ImoxajNvMTNtNmJnbjEtQVBMIiwicyI6IjE0IiwicCI6IjEwLC0xMCIsImEiOiIwIn1dfQ.xtg03TIIrHmOSvuB_zxdTZtmvSXzZ6xMXL9iJloFLMo/image;s=655x491;q=80",
-      "type": "otodom"
+      "type": "otodom",
+      "status": "new"
     },
     {
-      "name": "1pok-25m-Centrum-ul.Bagno-ciche-metro Świętokrzysk",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Centrum",
+      "name": "Warszawa, Mokotów ul. Bukietowa dla jednej osoby",
+      "location_short": "Mieszkanie na wynajem: Warszawa, Górny Mokotów",
       "rooms": "1",
       "area": "25m²",
-      "price": "1400zł/mc",
-      "offerOwner": "E-domnieruchomości",
-      "offerLink": "https://www.otodom.pl/oferta/1pok-25m-centrum-ul-bagno-ciche-metro-swietokrzysk-ID3TdPO.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6Ing3Mm10cTVmanEzaTMtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.-ksH2VfGzg7CDUKE0mXpNfHsThS7el87l0xp5aoqxSU/image;s=655x491;q=80",
-      "type": "otodom"
+      "price": "1200zł/mc",
+      "offerOwner": "StudioUrsynóws.c.",
+      "offerLink": "https://www.otodom.pl/oferta/warszawa-mokotow-ul-bukietowa-dla-jednej-osoby-ID3SoWO.html#ed84d0eb42",
+      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImhtbWRuejNuNjQ3NjItQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.iuyDJhUTGX5r8bUCV7T4EI7HNmErcyFosDvcGuuxFWw/image;s=655x491;q=80",
+      "type": "otodom",
+      "status": "new"
     },
     {
-      "name": "1pok-25m-Centrum-ul.Bagno-ciche-metro Świętokrzysk",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Centrum",
+      "name": "Ursus, ul. Zagłoby 6, konkurs na najem mieszkania",
+      "location_short": "Mieszkanie na wynajem: Warszawa, Ursus",
       "rooms": "1",
-      "area": "25m²",
-      "price": "1400zł/mc",
-      "offerOwner": "E-domnieruchomości",
-      "offerLink": "https://www.otodom.pl/oferta/1pok-25m-centrum-ul-bagno-ciche-metro-swietokrzysk-ID3T2Ev.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6IjMza2g1ZzF1N2xlYi1BUEwiLCJ3IjpbeyJmbiI6ImoxajNvMTNtNmJnbjEtQVBMIiwicyI6IjE0IiwicCI6IjEwLC0xMCIsImEiOiIwIn1dfQ.bf3limjPosvdbm7t_GIJaZ5mlvftIOpfnVGOeifDCwI/image;s=655x491;q=80",
-      "type": "otodom"
+      "area": "24,30m²",
+      "price": "1094zł/mc",
+      "offerOwner": "RobotniczaSpółdzielniaMieszkaniowa\"Ursus\"",
+      "offerLink": "https://www.otodom.pl/oferta/ursus-ul-zagloby-6-konkurs-na-najem-mieszkania-ID3KdBm.html#ed84d0eb42",
+      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6ImZybnZ4OTR6dW5lZS1BUEwiLCJ3IjpbeyJmbiI6ImoxajNvMTNtNmJnbjEtQVBMIiwicyI6IjE0IiwicCI6IjEwLC0xMCIsImEiOiIwIn1dfQ.HEpiIzFAxYdNtfUp-ugSqOv0-FJlOCapsv_95I5SR-c/image;s=655x491;q=80",
+      "type": "otodom",
+      "status": "new"
     },
     {
-      "name": "Kawalerka, Tuż Przy Pl.Wilsona",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Żoliborz",
+      "name": "Mieszkanie, 26 m², Warszawa",
+      "location_short": "Mieszkanie na wynajem: Warszawa, Wawer",
       "rooms": "1",
-      "area": "30m²",
-      "price": "1100zł/mc",
-      "offerOwner": "PonieckaNieruchomości",
-      "offerLink": "https://www.otodom.pl/oferta/kawalerka-tuz-przy-pl-wilsona-ID3SZhV.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6Imc0czh2cWNsOG5vZS1BUEwiLCJ3IjpbeyJmbiI6ImoxajNvMTNtNmJnbjEtQVBMIiwicyI6IjE0IiwicCI6IjEwLC0xMCIsImEiOiIwIn1dfQ.ZDx0_JTuTRZf8A3oQvt0TZ5kPgWexEKCcsvTCRsZihw/image;s=655x491;q=80",
-      "type": "otodom"
-    },
-    {
-      "name": "ul. Wilcza - Cicha kawalerka w centrum",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Śródmieście",
-      "rooms": "1",
-      "area": "22m²",
-      "price": "1400zł/mc",
-      "offerOwner": "BiuroNieruchomościJoanna-House",
-      "offerLink": "https://www.otodom.pl/oferta/ul-wilcza-cicha-kawalerka-w-centrum-ID3S2Q4.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6Ind1cWFhanl4b3E5dDEtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.d-ibXyQQdrY-sPxNV1x9aFsjIf_cpREyIWI4EGop_Q0/image;s=655x491;q=80",
-      "type": "otodom"
-    },
-    {
-      "name": "Kawalerka 29m2 ul. Podłużna - do wynajęcia",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Białołęka",
-      "rooms": "1",
-      "area": "28,74m²",
-      "price": "1250zł/mc",
-      "offerOwner": "Ofertaprywatna",
-      "offerLink": "https://www.otodom.pl/oferta/kawalerka-29m2-ul-podluzna-do-wynajecia-ID34UBE.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6InNscjV4OWRzZmwxMTItQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.4DPsKuumlBndIetTH4oWIcIAyzHh7s8iQocvraJTNv4/image;s=655x491;q=80",
-      "type": "otodom"
-    },
-    {
-      "name": "Super kawalerka w Międzylesiu Okazja!",
-      "location_short": "Mieszkanie na wynajem: Warszawa, Międzylesie",
-      "rooms": "1",
-      "area": "25m²",
-      "price": "1300zł/mc",
-      "offerOwner": "ImperiumNieruchomości",
-      "offerLink": "https://www.otodom.pl/oferta/super-kawalerka-w-miedzylesiu-okazja-ID3QymI.html#fc2f018173",
-      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6InVland4YTgyZ2FsMDMtQVBMIiwidyI6W3siZm4iOiJqMWozbzEzbTZiZ24xLUFQTCIsInMiOiIxNCIsInAiOiIxMCwtMTAiLCJhIjoiMCJ9XX0.cZYl1561LoShLYvFpAGJ0wIYkh1y5afd5N7BO9yDHzY/image;s=655x491;q=80",
-      "type": "otodom"
+      "area": "26m²",
+      "price": "1000zł/mc",
+      "offerOwner": "BraciaStrzelczykNieruchomości",
+      "offerLink": "https://www.otodom.pl/oferta/mieszkanie-26-m-warszawa-ID3hUxa.html#ed84d0eb42",
+      "imageLink": "https://apollo-ireland.akamaized.net/v1/files/eyJmbiI6InI5Znpxd2NtdjFpcS1BUEwiLCJ3IjpbeyJmbiI6ImoxajNvMTNtNmJnbjEtQVBMIiwicyI6IjE0IiwicCI6IjEwLC0xMCIsImEiOiIwIn1dfQ.U41tGPfTMw9bBX-qIcmHWc1K7__OUuG_mzft4IF0cZc/image;s=655x491;q=80",
+      "type": "otodom",
+      "status": "new"
     }
   ]
 }
